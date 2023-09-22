@@ -35,7 +35,7 @@ let tempid = 1;
 for(let i = 0; i < numOfRows;i++){
     for(let j = 0; j < numOfRows;j++){
         let cell = tbody.children[i].children[j]
-cell.style.backgroundColor = "green"
+cell.style.backgroundColor = "black"
 cell.setAttribute("id", tempid)//Assign ID dynamically from 1 to numOfCells
 
 //create click even for each cell______________________________________________________________________________
@@ -43,10 +43,10 @@ const btn = document.getElementById(tempid);
 
 btn.addEventListener('click', function onClick(event) {
   // 👇️ Change cell color switching between two colors
-  if(cell.style.backgroundColor == 'yellow'){
-    cell.style.backgroundColor = 'green'
-  }else if(cell.style.backgroundColor == 'green'){
-    cell.style.backgroundColor = 'yellow'
+  if(cell.style.backgroundColor == 'cyan'){
+    cell.style.backgroundColor = 'black'
+  }else if(cell.style.backgroundColor == 'black'){
+    cell.style.backgroundColor = 'cyan'
   }
 });
 //________________________________________________________
@@ -85,7 +85,7 @@ start.addEventListener('click', function onClick(event) {
     
     let temp = document.getElementById(i)
     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
-    if(temp.style.backgroundColor == "green"){
+    if(temp.style.backgroundColor == "black"){
         cellCurrStates[trackCurrState] = 0
     }else{
         cellCurrStates[trackCurrState] = 1
@@ -135,9 +135,9 @@ for(let i = 1; i <= numOfCells;i++){
     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
     let temp = document.getElementById(i)
     if(cellNextStates[trackCurrState] == 1){
-        temp.style.backgroundColor = "yellow"
+        temp.style.backgroundColor = "cyan"
     }else{
-        temp.style.backgroundColor = "green"
+        temp.style.backgroundColor = "black"
     }
 }
 
@@ -173,9 +173,9 @@ for(let i = 1; i <= numOfCells;i++){
     let temp = document.getElementById(i)
     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
     if(cellNextStates[trackCurrState] == 1){
-        temp.style.backgroundColor = "yellow"
+        temp.style.backgroundColor = "cyan"
     }else{
-        temp.style.backgroundColor = "green"
+        temp.style.backgroundColor = "black"
     }
 }
     //console.log(cellCurrStates)
@@ -196,9 +196,9 @@ for(let i = 1; i <= numOfCells;i++){
     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
     let temp = document.getElementById(i)
     if(cellNextStates[trackCurrState] == 1){
-        temp.style.backgroundColor = "yellow"
+        temp.style.backgroundColor = "cyan"
     }else{
-        temp.style.backgroundColor = "green"
+        temp.style.backgroundColor = "black"
     }
 }
     //console.log(cellCurrStates)
@@ -218,9 +218,9 @@ stopB.addEventListener('click', function onClick(event) {
 //     let trackCurrState = i + numOfRowsCurr + (Math.floor((i - 1)/numOfRows))*(2)
 //     let temp = document.getElementById(i)
 //     if(cellNextStates[trackCurrState] == 1){
-//         temp.style.backgroundColor = "yellow"
+//         temp.style.backgroundColor = "cyan"
 //     }else{
-//         temp.style.backgroundColor = "green"
+//         temp.style.backgroundColor = "black"
 //     }
 // }
     //console.log(cellCurrStates)
